@@ -1,0 +1,1037 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <!-- Boostrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!-- <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sidebars/"> -->
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- Font -->
+
+    <style id="woodmart-style-fonts-css" type="text/css">
+      /* latin-ext */
+      @font-face {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/lato/v17/S6uyw4BMUTPHjxAwXjeu.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      /* latin */
+      @font-face {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/lato/v17/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      /* latin-ext */
+      @font-face {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh6UVSwaPGR_p.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      /* latin */
+      @font-face {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh6UVSwiPGQ.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      /* devanagari */
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJbecmNE.woff2) format('woff2');
+        unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+      }
+      /* latin-ext */
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      /* latin */
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      /* devanagari */
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLGT9Z11lFc-K.woff2) format('woff2');
+        unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+      }
+      /* latin-ext */
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLGT9Z1JlFc-K.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      /* latin */
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      /* devanagari */
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLEj6Z11lFc-K.woff2) format('woff2');
+        unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+      }
+      /* latin-ext */
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLEj6Z1JlFc-K.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      /* latin */
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+    </style>
+    <style id="woodmart-style-fonts-css" type="text/css">
+      /* latin-ext */
+      @font-face {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/lato/v17/S6uyw4BMUTPHjxAwXjeu.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      /* latin */
+      @font-face {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/lato/v17/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      /* latin-ext */
+      @font-face {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh6UVSwaPGR_p.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      /* latin */
+      @font-face {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh6UVSwiPGQ.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      /* devanagari */
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJbecmNE.woff2) format('woff2');
+        unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+      }
+      /* latin-ext */
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      /* latin */
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      /* devanagari */
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLGT9Z11lFc-K.woff2) format('woff2');
+        unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+      }
+      /* latin-ext */
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLGT9Z1JlFc-K.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      /* latin */
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      /* devanagari */
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLEj6Z11lFc-K.woff2) format('woff2');
+        unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+      }
+      /* latin-ext */
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLEj6Z1JlFc-K.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      /* latin */
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+    </style>
+    
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+    <!-- Header Başlangıç  -->
+
+    <header>
+        <div class="header-wrapper">
+            <div class="container">
+                <div class="d-flex justify-content-between mobile-center">
+                    <div class="wrapper-element d-flex align-items-center mobile-remove">
+                        <div class="wrapper-item">
+                            <div class="dropdown">
+                                <a class="btn wrapper-font bl-prop">
+                                  ENGLISH
+                                  <i class="bi bi-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu shadow">
+                                  <li><a class="dropdown-item" href="#">Deutsch</a></li>
+                                  <li><a class="dropdown-item" href="#">French</a></li>
+                                  <li><a class="dropdown-item" href="#">Requires WPML plugin</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="wrapper-item">
+                            <div class="dropdown">
+                                <a class="btn wrapper-font bl-prop">
+                                  COUNTRY
+                                  <i class="bi bi-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu shadow">
+                                  <li><a class="dropdown-item" href="#">United States (USD)</a></li>
+                                  <li><a class="dropdown-item" href="#">Deutschland (EUR)</a></li>
+                                  <li><a class="dropdown-item" href="#">Japan (JPY)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="wrapper-item bl-prop">
+                            <a href="" class="btn wrapper-font">FREE SHIPPING FOR ALL ORDERS OF $150</a>
+                        </div>
+                    </div>
+                    <div class="wrapper-element d-flex">
+                        <div class="wrapper-item br-prop br-remove">
+                            <a href="" class="btn social-icon wrapper-font"><i class="bi bi-facebook"></i></a>
+                            <a href="" class="btn social-icon wrapper-font"><i class="bi bi-twitter"></i></a>
+                            <a href="" class="btn social-icon wrapper-font"><i class="bi bi-instagram"></i></a>
+                            <a href="" class="btn social-icon wrapper-font"><i class="bi bi-youtube"></i></a>
+                            <a href="" class="btn social-icon wrapper-font"><i class="bi bi-pinterest"></i></a>
+                        </div>
+                        <div class="wrapper-item br-prop mobile-remove">
+                            <a href="" class="btn wrapper-font">
+                                <i class="bi bi-envelope"></i>
+                                NEWSLETTER
+                            </a>
+                        </div>
+                        <div class="wrapper-item br-prop mobile-remove">
+                            <a href="" class="btn wrapper-font">CONTACT US</a>
+                        </div>
+                        <div class="wrapper-item br-prop mobile-remove">
+                            <a href="" class="btn wrapper-font">FAQS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="search-bar d-flex align-items-center">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="mobile-menu desktop-remove">
+                        <i class="bi bi-list"></i>
+                    </div>
+                    <a href="" class="logo-area"><img src="https://z9d7c4u6.rocketcdn.me/wp-content/themes/woodmart/images/wood-logo-dark.svg" class="navbar-logo" alt=""></a>
+                    <div class="search-area mobile-remove">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search for products" aria-label="Search">
+                            <div class="dropdown bl-prop br-prop">
+                                <a class="btn wrapper-font">
+                                  SELECT CATEGORY
+                                  <i class="bi bi-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu shadow">
+                                  <li><a class="dropdown-item" href="#">Deutsch</a></li>
+                                  <li><a class="dropdown-item" href="#">French</a></li>
+                                  <li><a class="dropdown-item" href="#">Requires WPML plugin</a></li>
+                                </ul>
+                            </div>
+                            <button class="btn" type="submit"><i class="bi bi-search"></i></button>
+                          </form>
+                    </div>
+                    <div class="member-details d-flex align-items-center">
+                        <div class="p-4 member-login mobile-remove">LOGIN/REGISTER</div>
+                        <div class="p-2 icon-controller mobile-remove">
+                            <!-- <span class="counter"></span> -->
+                            <i class="bi bi-heart"></i>
+                        </div>
+                        <div class="p-2 icon-controller mobile-remove">
+                            <span class="counter">0</span>
+                            <i class="bi bi-shuffle"></i>
+                        </div>
+                        <div class="p-2 icon-controller">
+                            <span class="counter">0</span>
+                            <i class="bi bi-bag"></i>
+                        </div>
+                        <div class="p-2 total-price mobile-remove">$00.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="sub-nav container d-flex justify-content-between mobile-remove">
+          <div class="d-flex align-items-center">
+            <div href="#" class="dropdown list-item">
+                <div class="btn d-flex justify-content-between align-items-center">
+                  <div class="d-flex list-font btn-color align-items-center">
+                    <i class="bi bi-list"></i>
+                    <p>BROWSE CATEGORIES</p>
+                  </div>
+                  <i class="bi bi-chevron-down btn-color"></i>
+                </div>
+                <ul class="dropdown-menu sub-dropmenu">
+                  <div class="sub-item dropdown">
+                    <a href="" class="btn d-flex align-items-center justify-content-between">
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-clock-fill"></i>
+                        Furniture
+                      </div>
+                      <i class="bi bi-chevron-right"></i>
+                    </a>
+                    <div class="dropdown-menu sub-drop-menu">
+                      <div class="d-flex flex-column justify-content-between h-100">
+                        <div class="col-11 mx-auto">
+                          <div class="row">
+                            <div class="col-3">
+                              <div class="col-10 mx-auto"><img src="https://woodmart.xtemos.com/wp-content/uploads/2017/01/menu-product-1-118x118.jpg" alt=""></div>
+                              <div class="col-10">
+                                <h3 class="sub-item-header mt-3">Clocks</h3>
+                                <ul>
+                                  <li class="mb-2"><a href="" class="sub-item-link">Mantel Clocks</a></li>
+                                  <li class="mb-2"><a href="" class="sub-item-link">Anniversary Clocks</a></li>
+                                  <li class="mb-2"><a href="" class="sub-item-link">Wall Clocks</a></li>
+                                  <li class="mb-2"><a href="" class="sub-item-link">Digital Clocks</a></li>
+                                  <li class="mb-2"><a href="" class="sub-item-link">Mantel Clocks</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-3">
+                              <div class="col-10 mx-auto"><img src="https://woodmart.xtemos.com/wp-content/uploads/2017/01/menu-product-3-118x118.jpg" alt=""></div>
+                              <div class="col-10">
+                                <h3 class="sub-item-header mt-3">Clocks</h3>
+                                <ul>
+                                  <li class="mb-2"><a href="" class="sub-item-link">Pepper Shakers</a></li>
+                                  <li class="mb-2"><a href="" class="sub-item-link">Spice Jars</a></li>
+                                  <li class="mb-2"><a href="" class="sub-item-link">Dish Drainers</a></li>
+                                  <li class="mb-2"><a href="" class="sub-item-link">Cocktail Shakers</a></li>
+                                  <li class="mb-2"><a href="" class="sub-item-link">Utensil Holders</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-3">
+                              <div class="col-10 mx-auto"><img src="https://woodmart.xtemos.com/wp-content/uploads/2017/01/menu-product-3-2-118x118.jpg" alt=""></div>
+                              <div class="col-10">
+                                <h3 class="sub-item-header mt-3">Clocks</h3>
+                                <ul>
+                                  <li class="mb-2"><a href="" class="sub-item-link">Mantel Clocks</a></li>
+                                  <li class="mb-2"><a href="" class="sub-item-link">Anniversary Clocks</a></li>
+                                  <li class="mb-2"><a href="" class="sub-item-link">Wall Clocks</a></li>
+                                  <li class="mb-2"><a href="" class="sub-item-link">Mantel Clocks</a></li>
+                                  <li class="mb-2"><a href="" class="sub-item-link">Mantel Clocks</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-3">
+                              <div class="col-10 mx-auto"><img src="https://woodmart.xtemos.com/wp-content/uploads/2017/01/menu-product-5-2-118x118.jpg" alt=""></div>
+                              <div class="col-10">
+                                <h3 class="sub-item-header mt-3">Clocks</h3>
+                                <ul>
+                                  <li class="mb-2"><a href="" class="sub-item-link">Mantel Clocks</a></li>
+                                  <li class="mb-2"><a href="" class="sub-item-link">Anniversary Clocks</a></li>
+                                  <li class="mb-2"><a href="" class="sub-item-link">Mantel Clocks</a></li>
+                                  <li class="mb-2"><a href="" class="sub-item-link">Mantel Clocks</a></li>
+                                  <li class="mb-2"><a href="" class="sub-item-link">Mantel Clocks</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="container-fluid referans-firm-bg">
+                          <div class="row">
+                            <a href="" class="col-3">
+                              <div class="d-flex justify-content-center"><img class="col-10 mx-auto sub-img-prop" src="https://woodmart.xtemos.com/wp-content/uploads/2016/09/brand-alessi.png" alt=""></div>
+                            </a>
+                            <a href="" class="col-3">
+                              <div class="d-flex justify-content-center"><img class="col-10 mx-auto sub-img-prop" src="https://woodmart.xtemos.com/wp-content/uploads/2016/09/brand-Eva-Solo.png" alt=""></div>
+                            </a>
+                            <a href="" class="col-3">
+                              <div class="d-flex justify-content-center"><img class="col-10 mx-auto sub-img-prop" src="https://woodmart.xtemos.com/wp-content/uploads/2016/09/brand-PackIt.png" alt=""></div>
+                            </a>
+                            <a href="" class="col-3">
+                              <div class="d-flex justify-content-center"><img class="col-10 mx-auto sub-img-prop" src="https://woodmart.xtemos.com/wp-content/uploads/2016/09/brand-witra.png" alt=""></div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sub-item dropdown">
+                    <a href="" class="btn d-flex align-items-center justify-content-between">
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-clock-fill"></i>
+                        Cooking
+                      </div>
+                      <i class="bi bi-chevron-right"></i>
+                    </a>
+                  </div>
+                  <div class="sub-item dropdown">
+                    <a href="" class="btn d-flex align-items-center justify-content-between">
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-clock-fill"></i>
+                        Accessories
+                      </div>
+                      <i class="bi bi-chevron-right"></i>
+                    </a>
+                  </div>
+                  <div class="sub-item dropdown">
+                    <a href="" class="btn d-flex align-items-center justify-content-between">
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-clock-fill"></i>
+                        Fashion
+                      </div>
+                      <i class="bi bi-chevron-right"></i>
+                    </a>
+                  </div>
+                  <div class="sub-item dropdown">
+                    <a href="" class="btn d-flex align-items-center justify-content-between">
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-clock-fill"></i>
+                        Clocks
+                      </div>
+                      <i class="bi bi-chevron-right"></i>
+                    </a>
+                  </div>
+                  <div class="sub-item dropdown">
+                    <a href="" class="btn d-flex align-items-center justify-content-between">
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-clock-fill"></i>
+                        Lighting
+                      </div>
+                      <i class="bi bi-chevron-right"></i>
+                    </a>
+                  </div>
+                  <div class="sub-item dropdown">
+                    <a href="" class="btn d-flex align-items-center justify-content-between">
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-clock-fill"></i>
+                        Toys
+                      </div>
+                      <i class="bi bi-chevron-right"></i>
+                    </a>
+                  </div>
+                  <div class="sub-item dropdown">
+                    <a href="" class="btn d-flex align-items-center justify-content-between">
+                      <div class="d-flex">
+                        <i class="bi bi-clock-fill"></i>
+                        Hand Made
+                      </div>
+                    </a>
+                  </div>
+                  <div class="sub-item dropdown">
+                    <a href="" class="btn d-flex align-items-center justify-content-between">
+                      <div class="d-flex">
+                        <i class="bi bi-clock-fill"></i>
+                        Minimalism
+                      </div>
+                    </a>
+                  </div>
+                  <div class="sub-item dropdown">
+                    <a href="" class="btn d-flex align-items-center justify-content-between">
+                      <div class="d-flex">
+                        <i class="bi bi-clock-fill"></i>
+                        Electronics
+                      </div>
+                    </a>
+                  </div>
+                  <div class="sub-item dropdown">
+                    <a href="" class="btn d-flex align-items-center justify-content-between">
+                      <div class="d-flex">
+                        <i class="bi bi-clock-fill"></i>
+                        Cars
+                      </div>
+                    </a>
+                  </div>
+                </ul>
+            </div>
+            <div class="list-item dropdown">
+              <a href="" class="btn list-font color-green padding-controller">
+                HOME <i class="bi bi-chevron-down"></i>
+              </a>
+              <ul class="dropdown-menu shadow sub-nav-category">
+                <div class="container d-flex flex-wrap">
+                  <div class="nav-category-item">
+                    <div class="item-position">
+                      <div class="category-item-img shadow"><img src="https://woodmart.xtemos.com/wp-content/uploads/2022/06/preview-megamarket.jpg" alt=""></div>
+                      <p class="item-name text-center mt-3">Demo Megamarket</p>
+                    </div>
+                  </div>
+                  <div class="nav-category-item">
+                    <div class="item-position">
+                      <div class="category-item-img shadow"><img src="https://woodmart.xtemos.com/wp-content/uploads/2022/06/preview-megamarket.jpg" alt=""></div>
+                      <p class="item-name text-center mt-3">Demo Megamarket</p>
+                    </div>
+                  </div>
+                  <div class="nav-category-item">
+                    <div class="item-position">
+                      <div class="category-item-img shadow"><img src="https://woodmart.xtemos.com/wp-content/uploads/2022/06/preview-megamarket.jpg" alt=""></div>
+                      <p class="item-name text-center mt-3">Demo Megamarket</p>
+                    </div>
+                  </div>
+                  <div class="nav-category-item">
+                    <div class="item-position">
+                      <div class="category-item-img shadow"><img src="https://woodmart.xtemos.com/wp-content/uploads/2022/06/preview-megamarket.jpg" alt=""></div>
+                      <p class="item-name text-center mt-3">Demo Megamarket</p>
+                    </div>
+                  </div>
+                  <div class="nav-category-item">
+                    <div class="item-position">
+                      <div class="category-item-img shadow"><img src="https://woodmart.xtemos.com/wp-content/uploads/2022/06/preview-megamarket.jpg" alt=""></div>
+                      <p class="item-name text-center mt-3">Demo Megamarket</p>
+                    </div>
+                  </div>
+                  <div class="nav-category-item">
+                    <div class="item-position">
+                      <div class="category-item-img shadow"><img src="https://woodmart.xtemos.com/wp-content/uploads/2022/06/preview-megamarket.jpg" alt=""></div>
+                      <p class="item-name text-center mt-3">Demo Megamarket</p>
+                    </div>
+                  </div>
+                  <div class="nav-category-item">
+                    <div class="item-position">
+                      <div class="category-item-img shadow"><img src="https://woodmart.xtemos.com/wp-content/uploads/2022/06/preview-megamarket.jpg" alt=""></div>
+                      <p class="item-name text-center mt-3">Demo Megamarket</p>
+                    </div>
+                  </div>
+                  <div class="nav-category-item">
+                    <div class="item-position">
+                      <div class="category-item-img shadow"><img src="https://woodmart.xtemos.com/wp-content/uploads/2022/06/preview-megamarket.jpg" alt=""></div>
+                      <p class="item-name text-center mt-3">Demo Megamarket</p>
+                    </div>
+                  </div>
+                  <div class="nav-category-item">
+                    <div class="item-position">
+                      <div class="category-item-img shadow"><img src="https://woodmart.xtemos.com/wp-content/uploads/2022/06/preview-megamarket.jpg" alt=""></div>
+                      <p class="item-name text-center mt-3">Demo Megamarket</p>
+                    </div>
+                  </div>
+                  <div class="nav-category-item">
+                    <div class="item-position">
+                      <div class="category-item-img shadow"><img src="https://woodmart.xtemos.com/wp-content/uploads/2022/06/preview-megamarket.jpg" alt=""></div>
+                      <p class="item-name text-center mt-3">Demo Megamarket</p>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+            <div class="list-item dropdown">
+              <a href="" class="btn list-font padding-controller">
+                SHOP <i class="bi bi-chevron-down"></i>
+              </a>
+              <ul class="dropdown-menu shadow sub-nav-category">
+                <div class="container d-flex flex-wrap">
+                  <div class="nav-category-item">
+                    <div class="item-position">
+                      <div class="category-item-img shadow"><img src="https://woodmart.xtemos.com/wp-content/uploads/2022/06/preview-megamarket.jpg" alt=""></div>
+                      <p class="item-name text-center mt-3">Shop Megamarket</p>
+                    </div>
+                  </div>
+                  <div class="nav-category-item">
+                    <div class="item-position">
+                      <div class="category-item-img shadow"><img src="https://woodmart.xtemos.com/wp-content/uploads/2022/06/preview-megamarket.jpg" alt=""></div>
+                      <p class="item-name text-center mt-3">Shop Megamarket</p>
+                    </div>
+                  </div>
+                  <div class="nav-category-item">
+                    <div class="item-position">
+                      <div class="category-item-img shadow"><img src="https://woodmart.xtemos.com/wp-content/uploads/2022/06/preview-megamarket.jpg" alt=""></div>
+                      <p class="item-name text-center mt-3">Shop Megamarket</p>
+                    </div>
+                  </div>
+                  <div class="nav-category-item">
+                    <div class="item-position">
+                      <div class="category-item-img shadow"><img src="https://woodmart.xtemos.com/wp-content/uploads/2022/06/preview-megamarket.jpg" alt=""></div>
+                      <p class="item-name text-center mt-3">Shop Megamarket</p>
+                    </div>
+                  </div>
+                  <div class="nav-category-item">
+                    <div class="item-position">
+                      <div class="category-item-img shadow"><img src="https://woodmart.xtemos.com/wp-content/uploads/2022/06/preview-megamarket.jpg" alt=""></div>
+                      <p class="item-name text-center mt-3">Shop Megamarket</p>
+                    </div>
+                  </div>
+                  <div class="nav-category-item">
+                    <div class="item-position">
+                      <div class="category-item-img shadow"><img src="https://woodmart.xtemos.com/wp-content/uploads/2022/06/preview-megamarket.jpg" alt=""></div>
+                      <p class="item-name text-center mt-3">Shop Megamarket</p>
+                    </div>
+                  </div>
+                  <div class="nav-category-item">
+                    <div class="item-position">
+                      <div class="category-item-img shadow"><img src="https://woodmart.xtemos.com/wp-content/uploads/2022/06/preview-megamarket.jpg" alt=""></div>
+                      <p class="item-name text-center mt-3">Shop Megamarket</p>
+                    </div>
+                  </div>
+                  <div class="nav-category-item">
+                    <div class="item-position">
+                      <div class="category-item-img shadow"><img src="https://woodmart.xtemos.com/wp-content/uploads/2022/06/preview-megamarket.jpg" alt=""></div>
+                      <p class="item-name text-center mt-3">Shop Megamarket</p>
+                    </div>
+                  </div>
+                  <div class="nav-category-item">
+                    <div class="item-position">
+                      <div class="category-item-img shadow"><img src="https://woodmart.xtemos.com/wp-content/uploads/2022/06/preview-megamarket.jpg" alt=""></div>
+                      <p class="item-name text-center mt-3">Shop Megamarket</p>
+                    </div>
+                  </div>
+                  <div class="nav-category-item">
+                    <div class="item-position">
+                      <div class="category-item-img shadow"><img src="https://woodmart.xtemos.com/wp-content/uploads/2022/06/preview-megamarket.jpg" alt=""></div>
+                      <p class="item-name text-center mt-3">Shop Megamarket</p>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+            <div class="list-item">
+              <a href="" class="list-item list-font padding-controller">
+                BLOG <i class="bi bi-chevron-down"></i>
+              </a>
+            </div>
+            <div class="list-item">
+              <a href="" class=" list-font ">
+                PAGES <i class="bi bi-chevron-down"></i>
+              </a>
+            </div>
+            <div class="list-item">
+              <a href="" class=" list-font padding-controller">
+                ELEMENTS <i class="bi bi-chevron-down"></i>
+              </a>
+            </div>
+            <div class="list-item">
+              <a href="" class=" list-font padding-controller">
+                BUY
+              </a>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <a href="" class="list-item list-font special-border br-prop color-green">SPECIAL OFFER</a>
+            <a href="" class="list-item list-font">PURCHASE THEME</a>
+          </div>
+        </div>
+        <hr class="mobile-remove">
+    </header>
+
+    <!-- Header Bitiş  -->
+
+    <!-- Carousel Area  -->
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="container d-flex justify-content-end">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row">
+                <div class="col-6 d-flex align-items-center">
+                  <div class="text-area col-lg-10 mx-auto align-middle">
+                    <h4>Simple - </h4>
+                    <h4>Rock Chair</h4>
+                    <p class="mt-2">Semper vulputate aliquam curae condimentum</p>
+                    <p class="mt-2">quisque gravida fusce convallis arcu cum at. </p>
+                    <div class="tab-area">
+                      <div class="d-flex">
+                        <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/01/swatch-main-demo-1.jpg" class="img-controller" alt="" data-item="data-item-1" >
+                        <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/01/swatch-main-demo-1-2.jpg" class="img-controller" alt="" data-item="data-item-2" >
+                        <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/01/swatch-main-demo-1-3.jpg" class="img-controller" alt="" data-item="data-item-3" >
+                        <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/01/swatch-main-demo-1-4.jpg" class="img-controller" alt="" data-item="data-item-4" >
+                      </div>
+                    </div>
+                    <h3 class="mt-2">$199.00</h3>
+                  </div>
+                </div>
+                <div class="col-6 overflow-controller d-flex align-items-center">
+                  <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/01/slider-main-demo-1.jpg" id="data-item-1" class="data-big-img active" alt="">
+                  <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/01/slider-main-demo-1-2.jpg" id="data-item-2" class="data-big-img" alt="">
+                  <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/01/slider-main-demo-1-3.jpg" id="data-item-3" class="data-big-img" alt="">
+                  <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/01/slider-main-demo-1-4.jpg" id="data-item-4" class="data-big-img" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-6 d-flex align-items-center">
+                  <div class="text-area col-lg-10 mx-auto align-middle">
+                    <h4>Simple - </h4>
+                    <h4>Rock Chair</h4>
+                    <p class="mt-2">Semper vulputate aliquam curae condimentum</p>
+                    <p class="mt-2">quisque gravida fusce convallis arcu cum at. </p>
+                    <div class="tab-area">
+                      <div class="d-flex">
+                        <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/01/swatch-main-demo-1.jpg" class="img-controller" alt="" data-item="data-item-5" >
+                        <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/01/swatch-main-demo-1-2.jpg" class="img-controller" alt="" data-item="data-item-6" >
+                        <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/01/swatch-main-demo-1-3.jpg" class="img-controller" alt="" data-item="data-item-7" >
+                        <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/01/swatch-main-demo-1-4.jpg" class="img-controller" alt="" data-item="data-item-8" >
+                      </div>
+                    </div>
+                    <h3 class="mt-2">$199.00</h3>
+                  </div>
+                </div>
+                <div class="col-6 overflow-controller d-flex align-items-center">
+                  <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/01/slider-main-demo-1.jpg" id="data-item-5" class="data-big-img active" alt="">
+                  <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/01/slider-main-demo-1-2.jpg" id="data-item-6" class="data-big-img" alt="">
+                  <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/01/slider-main-demo-1-3.jpg" id="data-item-7" class="data-big-img" alt="">
+                  <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/01/slider-main-demo-1-4.jpg" id="data-item-8" class="data-big-img" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-6 d-flex align-items-center">
+                  <div class="text-area col-lg-10 mx-auto align-middle">
+                    <h4>Simple - </h4>
+                    <h4>Rock Chair</h4>
+                    <p class="mt-2">Semper vulputate aliquam curae condimentum</p>
+                    <p class="mt-2">quisque gravida fusce convallis arcu cum at. </p>
+                    <div class="tab-area">
+                      <div class="d-flex">
+                        <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/01/swatch-main-demo-1.jpg" class="img-controller" alt="" data-item="data-item-9" >
+                        <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/01/swatch-main-demo-1-2.jpg" class="img-controller" alt="" data-item="data-item-10" >
+                        <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/01/swatch-main-demo-1-3.jpg" class="img-controller" alt="" data-item="data-item-11" >
+                        <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/01/swatch-main-demo-1-4.jpg" class="img-controller" alt="" data-item="data-item-12" >
+                      </div>
+                    </div>
+                    <h3 class="mt-2">$199.00</h3>
+                  </div>
+                </div>
+                <div class="col-6 overflow-controller d-flex align-items-center">
+                  <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/01/slider-main-demo-1.jpg" id="data-item-9  " class="data-big-img active" alt="">
+                  <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/01/slider-main-demo-1-2.jpg" id="data-item-10" class="data-big-img" alt="">
+                  <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/01/slider-main-demo-1-3.jpg" id="data-item-11" class="data-big-img" alt="">
+                  <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/01/slider-main-demo-1-4.jpg" id="data-item-12" class="data-big-img" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"><i class="bi bi-chevron-left"></i></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"><i class="bi bi-chevron-right"></i></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Carousel Area  -->
+
+    <!-- Sidebar -->
+    <div class="sidebar desktop-remove">
+        <div class="flex-shrink-0 bg-white">
+            <form class="d-flex align-items-center shadow" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search for products" aria-label="Search">
+                <i class="bi bi-search"></i>
+            </form>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-6 tab-item active" data-list="data-list-1">MENU</div>
+                <div class="col-6 tab-item" data-list="data-list-2">CATEGORIES</div>
+              </div>
+            </div>
+            <ul class="list-unstyled ps-0 active" id="data-list-1" data-list="data-list-1">
+              <li class="mb-1">
+                <a href="" class="btn">
+                  HOME
+                </a>
+              </li>
+                <li class="mb-1">
+                  <a href="" class="btn">
+                    DEMOS
+                  </a>
+                </li>
+                <li class="mb-1">
+                  <a href="" class="btn">
+                    SHOP
+                  </a>
+                </li>
+                <li class="mb-1">
+                  <a href="" class="btn">
+                    BLOG
+                  </a>
+                </li>
+                <li class="mb-1">
+                  <a href="" class="btn">
+                    PORTFOLIO
+                  </a>
+                </li>
+                <li class="mb-1">
+                  <a href="" class="btn">
+                    PAGES
+                  </a>
+                  <button class="btn btn-toggle rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false"></button>
+                  <div class="collapse" id="home-collapse" style="">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                      <li><a href="#" class="link-dark rounded">Overview</a></li>
+                      <li><a href="#" class="link-dark rounded">Updates</a></li>
+                      <li><a href="#" class="link-dark rounded">Reports</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="mb-1">
+                  <a href="" class="btn d-flex align-items-center">
+                    <i class="bi me-2 bi-heart"></i>
+                    WISHLIST
+                  </a>
+                </li>
+                <li class="mb-1">
+                  <a href="" class="btn d-flex align-items-center">
+                    <i class="bi me-2 bi-shuffle"></i>
+                    COMPARE
+                  </a>
+                </li>
+                <li class="mb-1">
+                  <a href="" class="btn d-flex align-items-center">
+                    <i class="bi me-2 bi-person"></i>
+                    LOGIN/REGISTER
+                  </a>
+                </li>
+              </li>
+            </ul>
+
+
+            <ul class="list-unstyled ps-0" id="data-list-2" data-list="data-list-2">
+              <li class="mb-1">
+                <a href="" class="btn">
+                  HOMEMADE
+                </a>
+              </li>
+                <li class="mb-1">
+                  <a href="" class="btn">
+                    DEMOS
+                  </a>
+                </li>
+                <li class="mb-1">
+                  <a href="" class="btn">
+                    SHOP
+                  </a>
+                </li>
+                <li class="mb-1">
+                  <a href="" class="btn">
+                    BLOG
+                  </a>
+                </li>
+                <li class="mb-1">
+                  <a href="" class="btn">
+                    PORTFOLIO
+                  </a>
+                </li>
+                <li class="mb-1">
+                  <a href="" class="btn">
+                    PAGES
+                  </a>
+                  <button class="btn btn-toggle rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-merhaba" aria-expanded="false"></button>
+                  <div class="collapse" id="home-merhaba" style="">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                      <li><a href="#" class="link-dark rounded">Overview</a></li>
+                      <li><a href="#" class="link-dark rounded">Updates</a></li>
+                      <li><a href="#" class="link-dark rounded">Reports</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="mb-1">
+                  <a href="" class="btn d-flex align-items-center">
+                    <i class="bi me-2 bi-heart"></i>
+                    WISHLIST
+                  </a>
+                </li>
+                <li class="mb-1">
+                  <a href="" class="btn d-flex align-items-center">
+                    <i class="bi me-2 bi-shuffle"></i>
+                    COMPARE
+                  </a>
+                </li>
+                <li class="mb-1">
+                  <a href="" class="btn d-flex align-items-center">
+                    <i class="bi me-2 bi-person"></i>
+                    LOGIN/REGISTER
+                  </a>
+                </li>
+              </li>
+            </ul>
+
+
+
+        </div>
+    </div>
+
+
+    <div class="space-area" style="padding: 400px 0;"></div>
+
+    <script>
+        $(document).ready(function(){
+
+          let imgSelector     = $('.carousel-item .tab-area .img-controller');
+          let showCaseItem    = $('.carousel-item .data-big-img');
+          let activeShowCase  = $('.carousel-item .data-big-img.active');
+          
+          $(imgSelector).click(function(){
+              var tab_id = $(this).attr('data-item');
+              $("#"+tab_id).siblings().removeClass('active')
+              $("#"+tab_id).addClass('active');
+          });
+
+
+
+          let dataItem        = $('.sidebar .container-fluid .row .col-6');
+          let showCaseItemA    = $('.sidebar .list-unstyled');
+          $(dataItem).click(function(){
+              var tab_id = $(this).attr('data-list');
+              $(dataItem).removeClass('active');
+              $(showCaseItemA).removeClass('active');
+              $(this).addClass('active');
+              $("#"+tab_id).addClass('active');
+          });
+
+          
+  
+
+          const mobileMenu      = document.querySelector('.mobile-menu');
+          const sideBar         = document.querySelector('.sidebar');
+          const flexShrink      = document.querySelector('.flex-shrink-0');
+          
+
+
+
+          mobileMenu.addEventListener('click',()=>{
+            sideBar.classList.add("active");
+          })
+          document.addEventListener('click',e=>{
+            if(
+              !e.composedPath().includes(flexShrink) && 
+              !e.composedPath().includes(mobileMenu)
+              )
+              {
+                sideBar.classList.remove('active');
+              }
+          });
+
+
+          let windowWidth     = $(window).width();
+          let subNavCategory  = $('.sub-nav .sub-nav-category');
+          let subNavWidth     = $(subNavCategory).width();
+          let positionSize    = parseFloat(((windowWidth-subNavWidth)/2)*(-1));
+          
+          $(subNavCategory).css('width',(windowWidth));
+          $(subNavCategory).css('left',(positionSize));
+          $(subNavCategory).css('right',(positionSize));
+
+          let subItemDrop     = $('.sub-item .sub-drop-menu');
+          let subItemWidth    = parseFloat((subNavWidth-378));
+          $(subItemDrop).css('width',(subItemWidth));
+      })
+    </script>
+    <script>
+
+      </script>
+
+    <!-- Boostrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
